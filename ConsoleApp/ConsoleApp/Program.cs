@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //task 1
-
+            #region task 1
             int[] numbers = { 1, 2, 3, 4, 5 };
             int biggestNumber = 0;
 
@@ -20,8 +19,9 @@
             }
 
             Console.WriteLine(biggestNumber);
+            #endregion
 
-            //task 2
+            #region task 2
 
             int[] numbers1 = { 1, 3, 5, 7, 9 };
             bool flag = false;
@@ -42,8 +42,9 @@
             {
                 Console.WriteLine(flag);
             }
+            #endregion
 
-            //task 3
+            #region task 3
 
             string[] words = { "lorem", "ipsum", "car" };
 
@@ -54,30 +55,46 @@
                     Console.WriteLine($"{i + 1}. soz ipsumdur!");
                 }
             }
+            #endregion
 
-            //task 4
-
-            Console.Write("Birinci soz sonra herf daxil edin:");
+            #region task 4
+            Console.Write("Birinci soz daxil edin:");
             string word = Console.ReadLine();
+            Console.WriteLine("Sonra herf daxil edin:");
             char letter = char.Parse(Console.ReadLine());
             bool checkBox = false;
 
             for (int i = 0; word.Length > i; i++)
             {
-                if(word[i] == letter)
+                if (word[i] == letter)
                 {
                     Console.WriteLine($"{word} sozunun icinde {letter} herfi var");
                     checkBox = true;
                     break;
                 }
-                
+
             }
 
             if (!checkBox)
             {
                 Console.WriteLine($"{word} sozunun icinde {letter} herfi yoxdur");
             }
+            #endregion
 
+            #region task 5
+            string[] allWords = { "Hello", "World", "Games", "Books", "T-bone stake" };
+            string reversWord = "";
+
+            for (int i = 0; allWords.Length > i; i++)
+            {
+                for (int j = allWords[i].Length-1; 0 <= j; j--)
+                {
+                    reversWord += allWords[i][j];
+                }
+                Console.WriteLine(reversWord);
+                reversWord = "";
+            }
+            #endregion
         }
     }
 }
